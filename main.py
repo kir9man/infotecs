@@ -23,14 +23,17 @@ def create_directory() -> str:
     return now_date
 
 
+# Формирует имя файла формата test[номер теста на текущий день]_[тип теста]([время теста: часы-минуты])
 def create_log_file_name(path: str, type_test: str) -> str:
     now_time = datetime.now().strftime("%H-%M")
     return f"test{len(os.listdir('logs/' + path)) + 1}_{type_test}({now_time})"
 
 
+# Добавление к имени файла результата теста 'FAILED' или 'PASSED'
 def result_test(directory: str, file_name: str) -> str:
     with open(f"logs/{directory}/{file_name}.txt", 'r', encoding='UTF8') as log_file:
         return 'FAILED' if any(['FAILED' in string for string in log_file.readlines()]) else 'PASSED'
+
 
 def main():
     global TYPE_TEST
