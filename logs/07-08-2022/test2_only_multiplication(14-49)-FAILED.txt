@@ -1,0 +1,72 @@
+============================= test session starts =============================
+platform win32 -- Python 3.10.0, pytest-7.1.2, pluggy-1.0.0 -- D:\pythonProject\test_tusk_infotecs\venv\Scripts\python.exe
+cachedir: .pytest_cache
+rootdir: D:\pythonProject\test_tusk_infotecs
+collecting ... collected 20 items
+
+tests/test_operations/test_multiplication.py::test_multi_good[4-5-20] FAILED [  5%]
+tests/test_operations/test_multiplication.py::test_multi_good[-12-12--144] FAILED [ 10%]
+tests/test_operations/test_multiplication.py::test_multi_good[-25--10-250] FAILED [ 15%]
+tests/test_operations/test_multiplication.py::test_multi_not_enough_keys[data0] PASSED [ 20%]
+tests/test_operations/test_multiplication.py::test_multi_not_enough_keys[data1] PASSED [ 25%]
+tests/test_operations/test_multiplication.py::test_multi_not_enough_keys[data2] PASSED [ 30%]
+tests/test_operations/test_multiplication.py::test_multi_not_enough_keys[data3] PASSED [ 35%]
+tests/test_operations/test_multiplication.py::test_multi_not_enough_keys[data4] PASSED [ 40%]
+tests/test_operations/test_multiplication.py::test_multi_incorrect_data[1-1.10] PASSED [ 45%]
+tests/test_operations/test_multiplication.py::test_multi_incorrect_data[1-1.11] PASSED [ 50%]
+tests/test_operations/test_multiplication.py::test_multi_incorrect_data[1-y2] PASSED [ 55%]
+tests/test_operations/test_multiplication.py::test_multi_limits[-2147483649-2147483648] PASSED [ 60%]
+tests/test_operations/test_multiplication.py::test_multi_limits[-2147483649-500] PASSED [ 65%]
+tests/test_operations/test_multiplication.py::test_multi_limits[23-2147483648] PASSED [ 70%]
+tests/test_operations/test_multiplication.py::test_multi_incorrect_url[multiplications] PASSED [ 75%]
+tests/test_operations/test_multiplication.py::test_multi_incorrect_url[multi] PASSED [ 80%]
+tests/test_operations/test_multiplication.py::test_multi_incorrect_url[get_multiplication] PASSED [ 85%]
+tests/test_operations/test_multiplication.py::test_multi_try_operation_dis_server[127.0.0.1-17678] PASSED [ 90%]
+tests/test_operations/test_multiplication.py::test_multi_try_operation_dis_server[127.31.255.255-8080] PASSED [ 95%]
+tests/test_operations/test_multiplication.py::test_multi_try_operation_dis_server[localhost-5413] PASSED [100%]
+
+================================== FAILURES ===================================
+___________________________ test_multi_good[4-5-20] ___________________________
+
+x = 4, y = 5, expected_result = 20
+
+    @pytest.mark.parametrize("x, y, expected_result", MULTI_PARAMS_GOOD)
+    def test_multi_good(x: int, y: int, expected_result: int):
+        results = preparation_for_test('multiplication', {"x": x, "y": y})
+>       assert results['statusCode'] == 10 and results['result'] == expected_result
+E       assert (0 == 10)
+
+tests\test_operations\test_multiplication.py:23: AssertionError
+---------------------------- Captured stdout setup ----------------------------
+�������� ���������� ���-�����������
+���-����������� ����������
+---------------------------- Captured stdout call -----------------------------
+������ ���-������������ �� 127.0.0.1:17678
+���-����������� ������� �� 127.0.0.1:17678
+________________________ test_multi_good[-12-12--144] _________________________
+
+x = -12, y = 12, expected_result = -144
+
+    @pytest.mark.parametrize("x, y, expected_result", MULTI_PARAMS_GOOD)
+    def test_multi_good(x: int, y: int, expected_result: int):
+        results = preparation_for_test('multiplication', {"x": x, "y": y})
+>       assert results['statusCode'] == 10 and results['result'] == expected_result
+E       assert (0 == 10)
+
+tests\test_operations\test_multiplication.py:23: AssertionError
+________________________ test_multi_good[-25--10-250] _________________________
+
+x = -25, y = -10, expected_result = 250
+
+    @pytest.mark.parametrize("x, y, expected_result", MULTI_PARAMS_GOOD)
+    def test_multi_good(x: int, y: int, expected_result: int):
+        results = preparation_for_test('multiplication', {"x": x, "y": y})
+>       assert results['statusCode'] == 10 and results['result'] == expected_result
+E       assert (0 == 10)
+
+tests\test_operations\test_multiplication.py:23: AssertionError
+=========================== short test summary info ===========================
+FAILED tests/test_operations/test_multiplication.py::test_multi_good[4-5-20]
+FAILED tests/test_operations/test_multiplication.py::test_multi_good[-12-12--144]
+FAILED tests/test_operations/test_multiplication.py::test_multi_good[-25--10-250]
+======================== 3 failed, 17 passed in 17.23s ========================
