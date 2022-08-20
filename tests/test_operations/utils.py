@@ -39,7 +39,6 @@ DISABLE_SERVER_URLS = [
 
 
 def preparation_for_test(operation: str, data: dict):
-    global HOST, PORT
     run_api(HOST, PORT)
     return get_math_operation(HOST, PORT, operation, data)
 

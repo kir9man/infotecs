@@ -19,7 +19,7 @@ TYPE_TEST = {
 def create_directory() -> str:
     now_date = datetime.now().strftime("%d-%m-%Y")
     if now_date not in os.listdir('logs'):
-        os.makedirs(f'logs/{now_date}')
+        os.mkdir(f'logs/{now_date}')
     return now_date
 
 
@@ -37,12 +37,14 @@ def result_test(directory: str, file_name: str) -> str:
 
 def main():
     global TYPE_TEST
-    type_test = TYPE_TEST['all_op']
+    type_test = TYPE_TEST['only_add']
     directory = create_directory()
     file_name = create_log_file_name(directory, type_test['name'])
     os.system(f"pytest -v {type_test['path']} >logs/{directory}/{file_name}.txt")
-    os.rename(f"logs/{directory}/{file_name}.txt",
-              f"logs/{directory}/{file_name}-{result_test(directory, file_name)}.txt")
+    os.rename(
+        f"logs/{directory}/{file_name}.txt",
+        f"logs/{directory}/{file_name}-{result_test(directory, file_name)}.txt"
+    )
 
 
 if __name__ == '__main__':
