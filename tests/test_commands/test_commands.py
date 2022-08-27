@@ -1,11 +1,11 @@
 import pytest
 
 from commands import *
-from tests.test_commands.utils import URLS
+from tests.test_commands.utils import URLS, URLS_IDS
 
 
 # Проверка правильности запуска приложения webcalculator.exe
-@pytest.mark.parametrize("url", URLS)
+@pytest.mark.parametrize("url", URLS, ids=URLS_IDS)
 def test_start_api(url):
     run_api(*url)
     result = check_connect(*url)['statusCode']
@@ -13,7 +13,7 @@ def test_start_api(url):
 
 
 # Проверка правильности остановки приложения webcalculator.exe
-@pytest.mark.parametrize("url", URLS)
+@pytest.mark.parametrize("url", URLS, ids=URLS_IDS)
 def test_stop_api(url):
     run_api(*url)
     calc_was_started = not bool(check_connect(*url)['statusCode'])
@@ -22,7 +22,7 @@ def test_stop_api(url):
 
 
 # Проверка правильности перезапуска приложения webcalculator.exe
-@pytest.mark.parametrize("url", URLS)
+@pytest.mark.parametrize("url", URLS, ids=URLS_IDS)
 def test_restart_api(url):
     run_api(*url)
     ping_started_api = not bool(check_connect(*url)['statusCode'])

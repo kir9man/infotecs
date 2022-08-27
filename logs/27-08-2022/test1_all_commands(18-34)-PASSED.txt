@@ -1,0 +1,23 @@
+============================= test session starts =============================
+platform win32 -- Python 3.10.0, pytest-7.1.2, pluggy-1.0.0 -- D:\pythonProject\test_tusk_infotecs\venv\Scripts\python.exe
+cachedir: .pytest_cache
+rootdir: D:\pythonProject\test_tusk_infotecs
+collecting ... collected 15 items
+
+tests/test_commands/test_commands.py::test_start_api[()] PASSED          [  6%]
+tests/test_commands/test_commands.py::test_start_api[(127.31.255.255)] PASSED [ 13%]
+tests/test_commands/test_commands.py::test_start_api[(localhost,5413)] PASSED [ 20%]
+tests/test_commands/test_commands.py::test_stop_api[()] PASSED           [ 26%]
+tests/test_commands/test_commands.py::test_stop_api[(127.31.255.255)] PASSED [ 33%]
+tests/test_commands/test_commands.py::test_stop_api[(localhost,5413)] PASSED [ 40%]
+tests/test_commands/test_commands.py::test_restart_api[()] PASSED        [ 46%]
+tests/test_commands/test_commands.py::test_restart_api[(127.31.255.255)] PASSED [ 53%]
+tests/test_commands/test_commands.py::test_restart_api[(localhost,5413)] PASSED [ 60%]
+tests/test_commands/test_state.py::test_state_activate_server[()] PASSED [ 66%]
+tests/test_commands/test_state.py::test_state_activate_server[(127.31.255.255)] PASSED [ 73%]
+tests/test_commands/test_state.py::test_state_activate_server[(localhost,5413)] PASSED [ 80%]
+tests/test_commands/test_state.py::test_state_disable_server[()] PASSED  [ 86%]
+tests/test_commands/test_state.py::test_state_disable_server[(127.31.255.255)] PASSED [ 93%]
+tests/test_commands/test_state.py::test_state_disable_server[(localhost,5413)] PASSED [100%]
+
+======================= 15 passed in 149.41s (0:02:29) ========================

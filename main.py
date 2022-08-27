@@ -37,7 +37,7 @@ def result_test(directory: str, file_name: str) -> str:
 
 def main():
     global TYPE_TEST
-    type_test = TYPE_TEST['only_add']
+    type_test = TYPE_TEST['all_op']
     directory = create_directory()
     file_name = create_log_file_name(directory, type_test['name'])
     os.system(f"pytest -v {type_test['path']} >logs/{directory}/{file_name}.txt")

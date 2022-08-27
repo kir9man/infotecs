@@ -1,3 +1,5 @@
+from typing import List
+
 from operations import get_math_operation
 from commands import run_api, stop_api
 
@@ -15,7 +17,7 @@ PARAMS_MISSING_ARGS = [
 
 PARAMS_INCORRECT_TYPE = [
     (1, 1.1),
-    ("1", 1.1),
+    ("10", 1.1),
     (1, [1]),
 ]
 
@@ -46,3 +48,11 @@ def preparation_for_test(operation: str, data: dict):
 def get_result_dis_server(host: str, port: str, operation: str, data: dict):
     stop_api()
     return get_math_operation(host, port, operation, data)
+
+
+def get_ids(params: List[tuple]) -> List[str]:
+    """
+    Преобразует список кортежей параметров для mark.parametrize(ids=)
+    в список строк для удобочитаемого вывода результатов тестов
+    """
+    return [f"({','.join(map(str, param))})" for param in params]

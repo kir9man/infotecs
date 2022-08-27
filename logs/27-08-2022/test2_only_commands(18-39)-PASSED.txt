@@ -1,0 +1,17 @@
+============================= test session starts =============================
+platform win32 -- Python 3.10.0, pytest-7.1.2, pluggy-1.0.0 -- D:\pythonProject\test_tusk_infotecs\venv\Scripts\python.exe
+cachedir: .pytest_cache
+rootdir: D:\pythonProject\test_tusk_infotecs
+collecting ... collected 9 items
+
+tests/test_commands/test_commands.py::test_start_api[()] PASSED          [ 11%]
+tests/test_commands/test_commands.py::test_start_api[(127.31.255.255)] PASSED [ 22%]
+tests/test_commands/test_commands.py::test_start_api[(localhost,5413)] PASSED [ 33%]
+tests/test_commands/test_commands.py::test_stop_api[()] PASSED           [ 44%]
+tests/test_commands/test_commands.py::test_stop_api[(127.31.255.255)] PASSED [ 55%]
+tests/test_commands/test_commands.py::test_stop_api[(localhost,5413)] PASSED [ 66%]
+tests/test_commands/test_commands.py::test_restart_api[()] PASSED        [ 77%]
+tests/test_commands/test_commands.py::test_restart_api[(127.31.255.255)] PASSED [ 88%]
+tests/test_commands/test_commands.py::test_restart_api[(localhost,5413)] PASSED [100%]
+
+======================== 9 passed in 106.58s (0:01:46) ========================
