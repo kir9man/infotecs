@@ -9,7 +9,7 @@ def get_math_operation(host: str, port: str, operation: str,  data: dict) -> dic
     if not check_connect(host, port)['statusCode']:
         rqst = requests.post(f"http://{host}:{port}/api/{operation}", data=json.dumps(data))
         return rqst.json()
-    raise ConnectionError(f"Сервер недоступен")
+    raise ConnectionError("Сервер недоступен")
 
 
 # функция state

@@ -1,0 +1,28 @@
+============================= test session starts =============================
+platform win32 -- Python 3.10.0, pytest-7.1.2, pluggy-1.0.0 -- D:\pythonProject\test_tusk_infotecs\venv\Scripts\python.exe
+cachedir: .pytest_cache
+rootdir: D:\pythonProject\test_tusk_infotecs
+collecting ... collected 20 items
+
+tests/test_operations/test_addition.py::test_addition_good[(1,2,3)] PASSED [  5%]
+tests/test_operations/test_addition.py::test_addition_good[(1234,321,1555)] PASSED [ 10%]
+tests/test_operations/test_addition.py::test_addition_good[(-10,-23,-33)] PASSED [ 15%]
+tests/test_operations/test_addition.py::test_addition_not_enough_keys[(k,z)] PASSED [ 20%]
+tests/test_operations/test_addition.py::test_addition_not_enough_keys[(x,z)] PASSED [ 25%]
+tests/test_operations/test_addition.py::test_addition_not_enough_keys[(z,y)] PASSED [ 30%]
+tests/test_operations/test_addition.py::test_addition_not_enough_keys[(x)] PASSED [ 35%]
+tests/test_operations/test_addition.py::test_addition_not_enough_keys[(y)] PASSED [ 40%]
+tests/test_operations/test_addition.py::test_addition_incorrect_data[(1,1.1)] PASSED [ 45%]
+tests/test_operations/test_addition.py::test_addition_incorrect_data[(10,1.1)] PASSED [ 50%]
+tests/test_operations/test_addition.py::test_addition_incorrect_data[(1,[1])] PASSED [ 55%]
+tests/test_operations/test_addition.py::test_addition_limits[(-2147483649,2147483648)] PASSED [ 60%]
+tests/test_operations/test_addition.py::test_addition_limits[(-2147483649,500)] PASSED [ 65%]
+tests/test_operations/test_addition.py::test_addition_limits[(23,2147483648)] PASSED [ 70%]
+tests/test_operations/test_addition.py::test_addition_incorrect_url[(additions)] PASSED [ 75%]
+tests/test_operations/test_addition.py::test_addition_incorrect_url[(show_sum)] PASSED [ 80%]
+tests/test_operations/test_addition.py::test_addition_incorrect_url[(get_sum)] PASSED [ 85%]
+tests/test_operations/test_addition.py::test_add_try_operation_dis_server[(127.0.0.1,17678)] PASSED [ 90%]
+tests/test_operations/test_addition.py::test_add_try_operation_dis_server[(127.31.255.255,8080)] PASSED [ 95%]
+tests/test_operations/test_addition.py::test_add_try_operation_dis_server[(localhost,5413)] PASSED [100%]
+
+============================= 20 passed in 17.35s =============================

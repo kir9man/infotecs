@@ -1,0 +1,31 @@
+============================= test session starts =============================
+platform win32 -- Python 3.10.0, pytest-7.1.2, pluggy-1.0.0 -- D:\pythonProject\test_tusk_infotecs\venv\Scripts\python.exe
+cachedir: .pytest_cache
+rootdir: D:\pythonProject\test_tusk_infotecs
+collecting ... collected 23 items
+
+tests/test_operations/test_division.py::test_division_good[(11,3,3)] PASSED [  4%]
+tests/test_operations/test_division.py::test_division_good[(54,6,9)] PASSED [  8%]
+tests/test_operations/test_division.py::test_division_good[(1000,-10,-100)] PASSED [ 13%]
+tests/test_operations/test_division.py::test_division_not_enough_keys[(k,z)] PASSED [ 17%]
+tests/test_operations/test_division.py::test_division_not_enough_keys[(x,z)] PASSED [ 21%]
+tests/test_operations/test_division.py::test_division_not_enough_keys[(z,y)] PASSED [ 26%]
+tests/test_operations/test_division.py::test_division_not_enough_keys[(x)] PASSED [ 30%]
+tests/test_operations/test_division.py::test_division_not_enough_keys[(y)] PASSED [ 34%]
+tests/test_operations/test_division.py::test_division_incorrect_data[(1,1.1)] PASSED [ 39%]
+tests/test_operations/test_division.py::test_division_incorrect_data[(10,1.1)] PASSED [ 43%]
+tests/test_operations/test_division.py::test_division_incorrect_data[(1,[1])] PASSED [ 47%]
+tests/test_operations/test_division.py::test_division_limits[(-2147483649,2147483648)] PASSED [ 52%]
+tests/test_operations/test_division.py::test_division_limits[(-2147483649,500)] PASSED [ 56%]
+tests/test_operations/test_division.py::test_division_limits[(23,2147483648)] PASSED [ 60%]
+tests/test_operations/test_division.py::test_division_incorrect_url[(divisions)] PASSED [ 65%]
+tests/test_operations/test_division.py::test_division_incorrect_url[(div)] PASSED [ 69%]
+tests/test_operations/test_division.py::test_division_incorrect_url[(show_div)] PASSED [ 73%]
+tests/test_operations/test_division.py::test_division_zero_div[(1,0)] PASSED [ 78%]
+tests/test_operations/test_division.py::test_division_zero_div[(5123,0)] PASSED [ 82%]
+tests/test_operations/test_division.py::test_division_zero_div[(-11,0)] PASSED [ 86%]
+tests/test_operations/test_division.py::test_div_try_operation_dis_server[(127.0.0.1,17678)] PASSED [ 91%]
+tests/test_operations/test_division.py::test_div_try_operation_dis_server[(127.31.255.255,8080)] PASSED [ 95%]
+tests/test_operations/test_division.py::test_div_try_operation_dis_server[(localhost,5413)] PASSED [100%]
+
+============================= 23 passed in 19.00s =============================

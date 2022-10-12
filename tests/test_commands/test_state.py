@@ -1,7 +1,7 @@
 import pytest
 
 from commands import run_api, check_connect, stop_api
-from utils import URLS, URLS_IDS
+from tests.test_commands.utils import URLS, URLS_IDS
 
 
 # Проверка правильности кода возврата get запроса /state активного сервера
